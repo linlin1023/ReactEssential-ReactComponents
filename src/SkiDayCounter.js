@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 
+const getPercent = decimal => {
+  return decimal * 100 + "%";
+};
+
+const getGoalProgress = (total, goal) => {
+  return getPercent(total / goal);
+};
+
 const SkiDayCounter = props => {
   return (
     <section>
@@ -12,6 +20,9 @@ const SkiDayCounter = props => {
       </div>
       <div>
         <p>Backcountry: {props.skiData.backcountry}</p>
+      </div>
+      <div>
+        <p> goral percentage : {getGoalProgress(34, 89)}</p>
       </div>
     </section>
   );
