@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 
-const books = [
-  { title: "Hunger", author: "Roxane Gay", pages: 320 },
-  { title: "The Sun Also Rise", author: "Ernest Hemingway", pages: 420 },
-  { title: "Cat's Cradle", author: "Kurt Vonnegut", pages: 480 }
-];
 const Book = ({ title, author, pages }) => {
   return (
     <section>
@@ -21,6 +16,10 @@ const Hiring = () => (
 );
 
 class Library extends Component {
+  static defaultProps = {
+    books: [{ title: "xxxx", author: "asdf", pages: 1000 }]
+  };
+
   state = { open: false };
 
   toggleOpenClosed = () => {
